@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaybeMyGame"
+        tools:targetApi="31">
+        <activity
+            android:name=".carsFaraLastWindow"
+            android:exported="false" />
+        <activity
+            android:name=".CarsFaraTwelveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraElevenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraTenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraNineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraEightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraSevenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraSixActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraFiveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraFourActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraTwoStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsFaraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoLastWindowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoTenStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoNintStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoEightStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoSevenStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoSixStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoFiveStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoFourStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoThreeStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoTwoStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".carsLogoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".selectCarsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".oldMemeFirstStep"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesLastWindowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesTwelveStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesEleventhStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesTenthStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesNinthStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesEghthStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesSeventhStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesSixthStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesFifthStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesFourthStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesThirdStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesSecondStepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".newMemesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".selectMemesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
