@@ -11,15 +11,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class newMemesLastWindowActivity extends AppCompatActivity {
+public class photoMemesLastWindow extends AppCompatActivity {
 
-    Button home_btn, photo_btn;
+    Button home_btn, sound_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_new_memes_last_window);
+        setContentView(R.layout.activity_photo_memes_last_window);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -27,24 +27,22 @@ public class newMemesLastWindowActivity extends AppCompatActivity {
         });
 
         home_btn = findViewById(R.id.home_btn);
-        photo_btn = findViewById(R.id.photo_btn);
+        sound_btn = findViewById(R.id.sound_btn);
 
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(newMemesLastWindowActivity.this, MainActivity.class);
+                Intent intent = new Intent(photoMemesLastWindow.this, MainActivity.class);
                 startActivity(intent);
             }
         });
 
-        photo_btn.setOnClickListener(new View.OnClickListener() {
+        sound_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(newMemesLastWindowActivity.this, photoMemesActivity.class);
+                Intent intent = new Intent(photoMemesLastWindow.this, newMemesActivity.class);
                 startActivity(intent);
             }
         });
-
-
     }
 }

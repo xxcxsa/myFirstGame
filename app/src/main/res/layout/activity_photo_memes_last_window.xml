@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".newMemesLastWindowActivity">
+    tools:context=".photoMemesLastWindow">
 
     <TextView
         android:id="@+id/text_myGame"
@@ -46,12 +46,12 @@
         app:layout_constraintTop_toBottomOf="@+id/text_myGame" />
 
     <Button
-        android:id="@+id/photo_btn"
+        android:id="@+id/sound_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="380dp"
         android:layout_marginEnd="76dp"
-        android:text="Угадать мем по фото"
+        android:text="Угадать мем по звуку"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

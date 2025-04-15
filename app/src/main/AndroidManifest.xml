@@ -13,6 +13,27 @@
         android:theme="@style/Theme.MaybeMyGame"
         tools:targetApi="31">
         <activity
+            android:name=".photoMemesLastWindow"
+            android:exported="false" />
+        <activity
+            android:name=".photoMemesSixActivity"
+            android:exported="false" />
+        <activity
+            android:name=".photoMemesFiveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".photoMemesFourActivity"
+            android:exported="false" />
+        <activity
+            android:name=".photoMemesThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".photoMemesTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".photoMemesActivity"
+            android:exported="false" />
+        <activity
             android:name=".carsFaraLastWindow"
             android:exported="false" />
         <activity
