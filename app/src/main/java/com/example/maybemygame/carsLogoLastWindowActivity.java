@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class carsLogoLastWindowActivity extends AppCompatActivity {
 
-    Button home_btn, cars_fara_btn;
+    Button home_btn, cars_fara_btn, back_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,15 @@ public class carsLogoLastWindowActivity extends AppCompatActivity {
 
         home_btn = findViewById(R.id.home_btn);
         cars_fara_btn = findViewById(R.id.cars_fara_btn);
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(carsLogoLastWindowActivity.this, carsLogoTenStepActivity.class);
+                startActivity(intent);
+            }
+        });
 
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override

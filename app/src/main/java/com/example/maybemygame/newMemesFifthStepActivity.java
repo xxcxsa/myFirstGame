@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class newMemesFifthStepActivity extends AppCompatActivity {
 
-    Button play_btn;
+    Button play_btn, back_btn;
 
     ImageView image_vitalya, image_pohlopayou, image_nice_mark, image_african_name;
 
@@ -41,6 +41,15 @@ public class newMemesFifthStepActivity extends AppCompatActivity {
         image_vitalya = findViewById(R.id.image_vitalya);
         image_nice_mark = findViewById(R.id.image_nice_mark);
         image_african_name = findViewById(R.id.image_african_name);
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(newMemesFifthStepActivity.this, newMemesFourthStepActivity.class);
+                startActivity(intent);
+            }
+        });
 
         play_btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -15,7 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class newMemesEghthStepActivity extends AppCompatActivity {
-    Button play_btn;
+    Button play_btn, back_btn;
 
     ImageView image_namano, image_k_uspehy_shel, image_vitalya, image_zabil;
 
@@ -34,11 +34,21 @@ public class newMemesEghthStepActivity extends AppCompatActivity {
 
         mPlayer = MediaPlayer.create(this, R.raw.namalno );
 
+        back_btn = findViewById(R.id.back_btn);
+
         play_btn = findViewById(R.id.play_btn);
         image_namano = findViewById(R.id.image_namano);
         image_vitalya = findViewById(R.id.image_vitalya);
         image_zabil = findViewById(R.id.image_zabil);
         image_k_uspehy_shel = findViewById(R.id.image_k_uspehy_shel);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(newMemesEghthStepActivity.this, newMemesSeventhStepActivity.class);
+                startActivity(intent);
+            }
+        });
 
         play_btn.setOnClickListener(new View.OnClickListener() {
             @Override

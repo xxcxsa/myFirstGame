@@ -1,5 +1,6 @@
 package com.example.maybemygame;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -16,12 +17,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class newMemesSixthStepActivity extends AppCompatActivity {
 
-    Button play_btn;
+    Button play_btn, back_btn;
 
     ImageView image_bananas, image_sova, image_vsego_horoshego, image_zabil;
 
     MediaPlayer mPlayer;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,16 @@ public class newMemesSixthStepActivity extends AppCompatActivity {
         image_zabil = findViewById(R.id.image_zabil);
         image_sova = findViewById(R.id.image_sova);
         image_vsego_horoshego = findViewById(R.id.image_vsego_horoshego);
+
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(newMemesSixthStepActivity.this, newMemesFifthStepActivity.class);
+                startActivity(intent);
+            }
+        });
 
         play_btn.setOnClickListener(new View.OnClickListener() {
             @Override

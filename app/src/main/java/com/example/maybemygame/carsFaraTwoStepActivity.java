@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class carsFaraTwoStepActivity extends AppCompatActivity {
 
-    Button rolls_btn, mercedes_btn, chrysler_btn, jeep_btn;
+    Button rolls_btn, mercedes_btn, chrysler_btn, jeep_btn, back_btn;
 
 
     @Override
@@ -32,6 +32,15 @@ public class carsFaraTwoStepActivity extends AppCompatActivity {
         mercedes_btn = findViewById(R.id.mercedes_btn);
         chrysler_btn = findViewById(R.id.chrysler_btn);
         jeep_btn = findViewById(R.id.jeep_btn);
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(carsFaraTwoStepActivity.this, carsFaraActivity.class);
+                startActivity(intent);
+            }
+        });
 
         jeep_btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.activity.BackEventCompat;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -14,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class carsLogoSixStepActivity extends AppCompatActivity {
 
-    Button mercedes_btn, seat_btn, ford_btn, ram_btn;
+    Button mercedes_btn, seat_btn, ford_btn, ram_btn, back_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,15 @@ public class carsLogoSixStepActivity extends AppCompatActivity {
         seat_btn = findViewById(R.id.seat_btn);
         ford_btn = findViewById(R.id.ford_btn);
         ram_btn = findViewById(R.id.ram_btn);
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(carsLogoSixStepActivity.this, carsLogoFiveStepActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mercedes_btn.setOnClickListener(new View.OnClickListener() {
             @Override

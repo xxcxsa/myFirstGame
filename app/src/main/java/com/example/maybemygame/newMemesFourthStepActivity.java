@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class newMemesFourthStepActivity extends AppCompatActivity {
 
-    Button play_btn;
+    Button play_btn, back_btn;
 
     ImageView image_dobryak, image_k_uspehy_shel, image_max_pried, image_morskaya_pehota;
 
@@ -40,6 +40,16 @@ public class newMemesFourthStepActivity extends AppCompatActivity {
         image_k_uspehy_shel = findViewById(R.id.image_k_uspehy_shel);
         image_morskaya_pehota = findViewById(R.id.image_morskaya_pehota);
 
+        back_btn = findViewById(R.id.back_btn);
+
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(newMemesFourthStepActivity.this, newMemesThirdStepActivity.class);
+                startActivity(intent);
+            }
+        });
         play_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

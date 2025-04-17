@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class newMemesEleventhStepActivity extends AppCompatActivity {
 
-    Button play_btn;
+    Button play_btn, back_btn;
 
     ImageView image_sasha, image_vitalya, image_smeshno, image_shokoladka;
 
@@ -33,12 +33,22 @@ public class newMemesEleventhStepActivity extends AppCompatActivity {
             return insets;
         });
 
+        back_btn = findViewById(R.id.back_btn);
+
         mPlayer = MediaPlayer.create(this, R.raw.vitalya );
         play_btn = findViewById(R.id.play_btn);
         image_sasha = findViewById(R.id.image_sasha);
         image_shokoladka = findViewById(R.id.image_shokoladka);
         image_smeshno = findViewById(R.id.image_smeshno);
         image_vitalya = findViewById(R.id.image_vitalya);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(newMemesEleventhStepActivity.this, newMemesTenthStepActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

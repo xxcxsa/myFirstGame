@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class carsLogoThreeStepActivity extends AppCompatActivity {
 
-    Button seat_btn, ferarri_btn, citroen_btn, subaru_btn;
+    Button seat_btn, ferarri_btn, citroen_btn, subaru_btn, back_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,15 @@ public class carsLogoThreeStepActivity extends AppCompatActivity {
         ferarri_btn = findViewById(R.id.ferarri_btn);
         citroen_btn = findViewById(R.id.citroen_btn);
         subaru_btn = findViewById(R.id.subaru_btn);
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(carsLogoThreeStepActivity.this, carsLogoTwoStepActivity.class);
+                startActivity(intent);
+            }
+        });
 
         seat_btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class carsFaraSevenActivity extends AppCompatActivity {
 
-    Button g63_btn, corvette_btn, audi_btn, ferarri_btn;
+    Button g63_btn, corvette_btn, audi_btn, ferarri_btn, back_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +27,20 @@ public class carsFaraSevenActivity extends AppCompatActivity {
             return insets;
         });
 
+        back_btn = findViewById(R.id.back_btn);
+
         g63_btn = findViewById(R.id.g63_btn);
         corvette_btn = findViewById(R.id.corvette_btn);
         audi_btn = findViewById(R.id.audi_btn);
         ferarri_btn = findViewById(R.id.ferarri_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(carsFaraSevenActivity.this, carsFaraSixActivity.class);
+                startActivity(intent);
+            }
+        });
 
         corvette_btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class carsFaraNineActivity extends AppCompatActivity {
 
-    Button g63_btn, bmw_btn, daewoo_btn, ford_btn;
+    Button g63_btn, bmw_btn, daewoo_btn, ford_btn, back_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,16 @@ public class carsFaraNineActivity extends AppCompatActivity {
         bmw_btn = findViewById(R.id.bmw_btn);
         daewoo_btn = findViewById(R.id.daewoo_btn);
         ford_btn = findViewById(R.id.ford_btn);
+
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(carsFaraNineActivity.this, carsFaraEightActivity.class);
+                startActivity(intent);
+            }
+        });
 
         g63_btn.setOnClickListener(new View.OnClickListener() {
             @Override

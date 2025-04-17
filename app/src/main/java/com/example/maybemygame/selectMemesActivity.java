@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class selectMemesActivity extends AppCompatActivity {
 
-    Button new_memes_btn, photo_memes_btn;
+    Button new_memes_btn, photo_memes_btn, back_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,17 @@ public class selectMemesActivity extends AppCompatActivity {
 
         new_memes_btn = findViewById(R.id.new_memes_btn);
         photo_memes_btn = findViewById(R.id.photo_memes_btn);
+        back_btn = findViewById(R.id.back_btn);
+
+
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(selectMemesActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         photo_memes_btn.setOnClickListener(new View.OnClickListener() {

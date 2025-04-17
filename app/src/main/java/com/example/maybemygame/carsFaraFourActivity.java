@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class carsFaraFourActivity extends AppCompatActivity {
 
-    Button charger_btn, ram_btn, challenger_btn, viper_btn;
+    Button charger_btn, ram_btn, challenger_btn, viper_btn, back_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +27,20 @@ public class carsFaraFourActivity extends AppCompatActivity {
             return insets;
         });
 
+        back_btn = findViewById(R.id.back_btn);
+
         charger_btn = findViewById(R.id.charger_btn);
         challenger_btn = findViewById(R.id.challenger_btn);
         ram_btn = findViewById(R.id.ram_btn);
         viper_btn = findViewById(R.id.viper_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(carsFaraFourActivity.this, carsFaraThreeActivity.class);
+                startActivity(intent);
+            }
+        });
 
         challenger_btn.setOnClickListener(new View.OnClickListener() {
             @Override

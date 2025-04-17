@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class newMemesTenthStepActivity extends AppCompatActivity {
 
-    Button play_btn;
+    Button play_btn, back_btn;
 
     ImageView image_gargamel, image_shodka, image_otdai_salo, image_poka;
 
@@ -40,6 +40,16 @@ public class newMemesTenthStepActivity extends AppCompatActivity {
         image_poka = findViewById(R.id.image_poka);
         image_shodka = findViewById(R.id.image_shodka);
         image_otdai_salo = findViewById(R.id.image_otdai_salo);
+
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(newMemesTenthStepActivity.this, newMemesNinthStepActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         play_btn.setOnClickListener(new View.OnClickListener() {

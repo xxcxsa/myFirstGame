@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class CarsFaraTwelveActivity extends AppCompatActivity {
 
-    Button rs6_btn, g63_btn, audi_btn, c63_btn;
+    Button rs6_btn, g63_btn, audi_btn, c63_btn, back_btn;
 
 
     @Override
@@ -32,6 +32,16 @@ public class CarsFaraTwelveActivity extends AppCompatActivity {
         g63_btn = findViewById(R.id.g63_btn);
         audi_btn = findViewById(R.id.audi_btn);
         c63_btn = findViewById(R.id.c63_btn);
+
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CarsFaraTwelveActivity.this, carsFaraElevenActivity.class);
+                startActivity(intent);
+            }
+        });
 
         audi_btn.setOnClickListener(new View.OnClickListener() {
             @Override

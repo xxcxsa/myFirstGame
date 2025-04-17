@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class newMemesSecondStepActivity extends AppCompatActivity {
 
-    Button play_btn;
+    Button play_btn, back_btn;
 
     ImageView image_povar, image_namano, image_bom_bom, image_denchick;
     MediaPlayer mPlayer;
@@ -39,6 +39,16 @@ public class newMemesSecondStepActivity extends AppCompatActivity {
         image_namano = findViewById(R.id.image_namano);
         image_povar = findViewById(R.id.image_povar);
         image_bom_bom = findViewById(R.id.image_bom_bom);
+
+        back_btn = findViewById(R.id.back_btn);
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(newMemesSecondStepActivity.this, newMemesActivity.class);
+                startActivity(intent);
+            }
+        });
 
         play_btn.setOnClickListener(new View.OnClickListener() {
             @Override
