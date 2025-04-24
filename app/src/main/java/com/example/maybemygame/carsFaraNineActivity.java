@@ -47,6 +47,7 @@ public class carsFaraNineActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(carsFaraNineActivity.this, carsFaraTenActivity.class);
                 startActivity(intent);
+                ScoreManager.increaseScore(10);
             }
         });
 
@@ -54,6 +55,7 @@ public class carsFaraNineActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 faraFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -61,6 +63,7 @@ public class carsFaraNineActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 faraFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -68,6 +71,7 @@ public class carsFaraNineActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 faraFalse();
+                ScoreManager.minusScore(3);
             }
         });
     }

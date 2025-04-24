@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class photoMemesLastWindow extends AppCompatActivity {
 
     Button home_btn, sound_btn;
+    TextView text_last;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,9 @@ public class photoMemesLastWindow extends AppCompatActivity {
 
         home_btn = findViewById(R.id.home_btn);
         sound_btn = findViewById(R.id.sound_btn);
+        text_last = findViewById(R.id.text_last);
+
+        text_last.setText("Вы прошли квиз игру!\n" + "Ваш счет: " +  ScoreManager.getScore() + " Очков! ");
 
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override

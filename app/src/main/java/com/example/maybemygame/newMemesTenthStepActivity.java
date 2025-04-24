@@ -67,6 +67,7 @@ public class newMemesTenthStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -74,6 +75,7 @@ public class newMemesTenthStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -81,12 +83,14 @@ public class newMemesTenthStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
         image_poka.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.increaseScore(15);
                 Intent intent = new Intent(newMemesTenthStepActivity.this, newMemesEleventhStepActivity.class);
                 startActivity(intent);
                 mPlayer.stop();

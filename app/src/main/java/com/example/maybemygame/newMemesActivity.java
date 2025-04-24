@@ -16,6 +16,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.color.utilities.Score;
+
 public class newMemesActivity extends AppCompatActivity {
 
     Button play_btn, back_btn;
@@ -73,6 +75,7 @@ public class newMemesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 image_False();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -80,6 +83,7 @@ public class newMemesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 image_False();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -87,12 +91,14 @@ public class newMemesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 image_False();
+                ScoreManager.minusScore(5);
             }
         });
 
         image_kapusta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.increaseScore(15);
                 Intent intent = new Intent(newMemesActivity.this, newMemesSecondStepActivity.class);
                 startActivity(intent);
                 mPlayer.stop();

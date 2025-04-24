@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class carsLogoLastWindowActivity extends AppCompatActivity {
 
     Button home_btn, cars_fara_btn, back_btn;
+
+    TextView text_last;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,21 +31,17 @@ public class carsLogoLastWindowActivity extends AppCompatActivity {
 
         home_btn = findViewById(R.id.home_btn);
         cars_fara_btn = findViewById(R.id.cars_fara_btn);
-        back_btn = findViewById(R.id.back_btn);
+        text_last = findViewById(R.id.text_last);
 
-        back_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(carsLogoLastWindowActivity.this, carsLogoTenStepActivity.class);
-                startActivity(intent);
-            }
-        });
+        text_last.setText("Вы прошли квиз игру!\n" + "Ваш счет: " +  ScoreManager.getScore() + " Очков! ");
+
 
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(carsLogoLastWindowActivity.this, MainActivity.class);
                 startActivity(intent);
+                ScoreManager.resetScore();
             }
         });
 
@@ -51,6 +50,7 @@ public class carsLogoLastWindowActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(carsLogoLastWindowActivity.this, carsFaraActivity.class);
                 startActivity(intent);
+                ScoreManager.resetScore();
             }
         });
     }

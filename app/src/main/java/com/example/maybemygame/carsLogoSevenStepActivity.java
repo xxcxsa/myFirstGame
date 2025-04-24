@@ -47,6 +47,7 @@ public class carsLogoSevenStepActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(carsLogoSevenStepActivity.this, carsLogoEightStepActivity.class);
                 startActivity(intent);
+                ScoreManager.increaseScore(10);
             }
         });
 
@@ -54,12 +55,14 @@ public class carsLogoSevenStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
         bmw_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -67,6 +70,7 @@ public class carsLogoSevenStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
     }

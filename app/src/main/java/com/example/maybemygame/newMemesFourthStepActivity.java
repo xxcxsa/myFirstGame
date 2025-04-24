@@ -65,6 +65,7 @@ public class newMemesFourthStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -72,12 +73,14 @@ public class newMemesFourthStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
         image_dobryak.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.increaseScore(15);
                 Intent intent = new Intent(newMemesFourthStepActivity.this, newMemesFifthStepActivity.class);
                 startActivity(intent);
                 mPlayer.stop();
@@ -88,6 +91,7 @@ public class newMemesFourthStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 

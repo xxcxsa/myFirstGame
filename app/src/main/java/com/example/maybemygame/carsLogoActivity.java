@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.color.utilities.Score;
+
 public class carsLogoActivity extends AppCompatActivity {
 
 
@@ -50,6 +52,7 @@ public class carsLogoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(carsLogoActivity.this, carsLogoTwoStepActivity.class);
                 startActivity(intent);
+                ScoreManager.increaseScore(10);
             }
         });
 
@@ -57,6 +60,7 @@ public class carsLogoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -64,6 +68,7 @@ public class carsLogoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -71,6 +76,7 @@ public class carsLogoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
     }

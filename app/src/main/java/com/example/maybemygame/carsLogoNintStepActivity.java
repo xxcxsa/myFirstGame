@@ -46,24 +46,28 @@ public class carsLogoNintStepActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(carsLogoNintStepActivity.this, carsLogoTenStepActivity.class);
                 startActivity(intent);
+                ScoreManager.increaseScore(10);
             }
         });
         ferarri_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
         byd_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
         lexus_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
     }

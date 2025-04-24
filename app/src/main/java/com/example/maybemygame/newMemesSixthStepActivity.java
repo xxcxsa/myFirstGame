@@ -69,6 +69,7 @@ public class newMemesSixthStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -76,6 +77,7 @@ public class newMemesSixthStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -83,12 +85,14 @@ public class newMemesSixthStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
         image_vsego_horoshego.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.increaseScore(15);
                 Intent intent = new Intent(newMemesSixthStepActivity.this, newMemesSeventhStepActivity.class);
                 startActivity(intent);
                 mPlayer.stop();

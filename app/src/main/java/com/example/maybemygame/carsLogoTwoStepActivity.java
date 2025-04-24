@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.color.utilities.Score;
+
 public class carsLogoTwoStepActivity extends AppCompatActivity {
 
     Button tesla_btn, buick_btn, toyota_btn, mercedes_btn, back_btn;
@@ -47,6 +49,7 @@ public class carsLogoTwoStepActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(carsLogoTwoStepActivity.this, carsLogoThreeStepActivity.class);
                 startActivity(intent);
+                ScoreManager.increaseScore(10);
             }
         });
 
@@ -54,6 +57,7 @@ public class carsLogoTwoStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -61,6 +65,7 @@ public class carsLogoTwoStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -68,6 +73,7 @@ public class carsLogoTwoStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
     }

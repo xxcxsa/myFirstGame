@@ -66,6 +66,7 @@ public class newMemesTwelveStepActivity extends AppCompatActivity {
         image_african_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.increaseScore(15);
                 Intent intent = new Intent(newMemesTwelveStepActivity.this, newMemesLastWindowActivity.class);
                 startActivity(intent);
                 mPlayer.stop();
@@ -75,12 +76,14 @@ public class newMemesTwelveStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
         image_shkola.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -88,6 +91,7 @@ public class newMemesTwelveStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 

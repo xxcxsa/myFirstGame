@@ -67,18 +67,21 @@ public class newMemesThirdStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
         image_ded.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
         image_dirizhabl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.increaseScore(15);
                 Intent intent = new Intent(newMemesThirdStepActivity.this, newMemesFourthStepActivity.class);
                 startActivity(intent);
                 mPlayer.stop();
@@ -89,6 +92,7 @@ public class newMemesThirdStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 

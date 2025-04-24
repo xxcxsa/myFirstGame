@@ -14,6 +14,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.color.utilities.Score;
+
 public class newMemesSecondStepActivity extends AppCompatActivity {
 
     Button play_btn, back_btn;
@@ -65,6 +67,7 @@ public class newMemesSecondStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 image_False();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -72,6 +75,7 @@ public class newMemesSecondStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 image_False();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -79,12 +83,14 @@ public class newMemesSecondStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 image_False();
+                ScoreManager.minusScore(5);
             }
         });
 
         image_povar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.increaseScore(15);
                 Intent intent = new Intent(newMemesSecondStepActivity.this, newMemesThirdStepActivity.class);
                 startActivity(intent);
                 mPlayer.stop();

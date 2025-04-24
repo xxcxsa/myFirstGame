@@ -46,6 +46,7 @@ public class carsLogoEightStepActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(carsLogoEightStepActivity.this, carsLogoNintStepActivity.class);
                 startActivity(intent);
+                ScoreManager.increaseScore(10);
             }
         });
 
@@ -53,6 +54,7 @@ public class carsLogoEightStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -60,6 +62,7 @@ public class carsLogoEightStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -67,6 +70,7 @@ public class carsLogoEightStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
     }

@@ -45,6 +45,9 @@ public class carsFaraActivity extends AppCompatActivity {
         audi_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                ScoreManager.increaseScore(10);
+
                 Intent intent = new Intent(carsFaraActivity.this, carsFaraTwoStepActivity.class);
                 startActivity(intent);
             }
@@ -54,18 +57,21 @@ public class carsFaraActivity extends AppCompatActivity {
         acura_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.minusScore(3);
                 faraFalse();
             }
         });
         mercedes_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.minusScore(3);
                 faraFalse();
             }
         });
         daewoo_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.minusScore(3);
                 faraFalse();
             }
         });

@@ -13,6 +13,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.color.utilities.Score;
+
 public class carsLogoSixStepActivity extends AppCompatActivity {
 
     Button mercedes_btn, seat_btn, ford_btn, ram_btn, back_btn;
@@ -46,6 +48,7 @@ public class carsLogoSixStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -53,6 +56,7 @@ public class carsLogoSixStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -60,6 +64,7 @@ public class carsLogoSixStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btnFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -68,6 +73,7 @@ public class carsLogoSixStepActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(carsLogoSixStepActivity.this, carsLogoSevenStepActivity.class);
                 startActivity(intent);
+                ScoreManager.increaseScore(10);
             }
         });
     }

@@ -65,6 +65,7 @@ public class newMemesSeventhStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -72,12 +73,14 @@ public class newMemesSeventhStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 
         image_denchick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.increaseScore(15);
                 Intent intent = new Intent(newMemesSeventhStepActivity.this, newMemesEghthStepActivity.class);
                 startActivity(intent);
                 mPlayer.stop();
@@ -88,6 +91,7 @@ public class newMemesSeventhStepActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 imageFalse();
+                ScoreManager.minusScore(5);
             }
         });
 

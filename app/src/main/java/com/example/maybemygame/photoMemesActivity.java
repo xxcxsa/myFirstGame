@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.color.utilities.Score;
+
 public class photoMemesActivity extends AppCompatActivity {
 
     Button dobryak_btn, sova_btn, banana_btn, kapusta_btn;
@@ -37,6 +39,7 @@ public class photoMemesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Failed();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -44,6 +47,7 @@ public class photoMemesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Failed();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -51,12 +55,14 @@ public class photoMemesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Failed();
+                ScoreManager.minusScore(5);
             }
         });
 
         banana_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ScoreManager.increaseScore(15);
                 Intent intent = new Intent(photoMemesActivity.this, photoMemesTwoActivity.class);
                 startActivity(intent);
             }

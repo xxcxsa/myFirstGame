@@ -36,6 +36,7 @@ public class photoMemesTwoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Failed();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -43,6 +44,7 @@ public class photoMemesTwoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Failed();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -50,6 +52,7 @@ public class photoMemesTwoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Failed();
+                ScoreManager.minusScore(5);
             }
         });
 
@@ -58,6 +61,7 @@ public class photoMemesTwoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(photoMemesTwoActivity.this, photoMemesThreeActivity.class);
                 startActivity(intent);
+                ScoreManager.increaseScore(15);
             }
         });
 

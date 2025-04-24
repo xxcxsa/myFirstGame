@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.color.utilities.Score;
+
 public class carsFaraEightActivity extends AppCompatActivity {
 
     Button charger_btn, bmw_btn, c43_btn, audi_btn, back_btn;
@@ -48,6 +50,7 @@ public class carsFaraEightActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(carsFaraEightActivity.this, carsFaraNineActivity.class);
                 startActivity(intent);
+                ScoreManager.increaseScore(10);
             }
         });
 
@@ -55,6 +58,7 @@ public class carsFaraEightActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 faraFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -62,6 +66,7 @@ public class carsFaraEightActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 faraFalse();
+                ScoreManager.minusScore(3);
             }
         });
 
@@ -69,6 +74,7 @@ public class carsFaraEightActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 faraFalse();
+                ScoreManager.minusScore(3);
             }
         });
     }
