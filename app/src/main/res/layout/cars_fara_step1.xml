@@ -7,20 +7,14 @@
     android:padding="16dp">
 
     <Button
-        android:id="@+id/btn_cars_fara"
+        android:id="@+id/btn_seat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Играть: Угадай по фаре" />
+        android:text="Правильный ответ" />
 
     <Button
-        android:id="@+id/btn_cars_logo"
-        android:layout_width="206dp"
+        android:id="@+id/btn_wrong"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Играть: Угадай Лого" />
-
-    <Button
-        android:id="@+id/btn_memes"
-        android:layout_width="206dp"
-        android:layout_height="wrap_content"
-        android:text="Играть: Угадать мем" />
+        android:text="Неправильный ответ" />
 </LinearLayout>

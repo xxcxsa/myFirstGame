@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".photoMemesTwoActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/text_myGame"
@@ -37,7 +36,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginBottom="56dp"
         android:text="Мафиози"
-        app:layout_constraintBottom_toTopOf="@+id/morskaya_btn"
+        app:layout_constraintBottom_toTopOf="@+id/meme_correct"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -51,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/morskaya_btn"
+        android:id="@+id/meme_correct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

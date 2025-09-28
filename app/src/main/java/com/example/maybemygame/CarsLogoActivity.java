@@ -5,18 +5,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.Nullable;
-
-public class photoMemesActivity extends BaseActivity {
+public class CarsLogoActivity extends BaseActivity {
     private int currentStep = 0;
 
     private final int[] stepLayouts = {
-            R.layout.activity_photo_memes,
-            R.layout.activity_photo_memes_two,
-            R.layout.activity_photo_memes_three,
-            R.layout.activity_photo_memes_four,
-            R.layout.activity_photo_memes_five,
-            R.layout.activity_photo_memes_six,
+            R.layout.activity_cars_logo,
+            R.layout.activity_cars_logo_two_step,
+            R.layout.activity_cars_logo_three_step,
+            R.layout.activity_cars_logo_four_step,
+            R.layout.activity_cars_logo_five_step,
+            R.layout.activity_cars_logo_six_step,
+            R.layout.activity_cars_logo_seven_step,
+            R.layout.activity_cars_logo_eight_step,
+            R.layout.activity_cars_logo_nint_step,
+            R.layout.activity_cars_logo_ten_step,
     };
 
     @Override
@@ -39,7 +41,7 @@ public class photoMemesActivity extends BaseActivity {
     private void setupStepUI(int stepIndex) {
         if (stepIndex < stepLayouts.length - 1) {
             // универсальная логика для шагов
-            Button btnCorrect = findViewById(R.id.meme_correct);
+            Button btnCorrect = findViewById(R.id.btn_correct);
             Button btnWrong = findViewById(R.id.btn_wrong);
 
             if (btnCorrect != null) {
@@ -49,12 +51,13 @@ public class photoMemesActivity extends BaseActivity {
                 btnWrong.setOnClickListener(v -> goToGameOver());
             }
         } else {
+            // победный экран
             Button btnFinish = findViewById(R.id.btn_finish);
             if (btnFinish != null) {
                 btnFinish.setOnClickListener(v -> goToMenu());
             }
 
-            Button End = findViewById(R.id.meme_end);
+            Button End = findViewById(R.id.btn_end);
             End.setOnClickListener(v -> goToMenu());
         }
     }
@@ -73,4 +76,5 @@ public class photoMemesActivity extends BaseActivity {
         startActivity(new Intent(this, VictoryActivity.class));
 
     }
+
 }

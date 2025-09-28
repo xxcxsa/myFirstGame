@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".carsLogoActivity">
+    >
 
     <TextView
         android:id="@+id/text_myGame"
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/toyota_btn"
+        android:id="@+id/btn_seat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="44dp"
@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/acura_btn"
+        android:id="@+id/btn_correct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="228dp"

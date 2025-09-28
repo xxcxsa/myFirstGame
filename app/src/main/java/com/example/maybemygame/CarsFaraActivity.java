@@ -2,21 +2,25 @@ package com.example.maybemygame;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.annotation.Nullable;
+public class CarsFaraActivity extends AppCompatActivity {
 
-public class photoMemesActivity extends BaseActivity {
     private int currentStep = 0;
 
     private final int[] stepLayouts = {
-            R.layout.activity_photo_memes,
-            R.layout.activity_photo_memes_two,
-            R.layout.activity_photo_memes_three,
-            R.layout.activity_photo_memes_four,
-            R.layout.activity_photo_memes_five,
-            R.layout.activity_photo_memes_six,
+            R.layout.activity_cars_fara_two_step,
+            R.layout.activity_cars_fara_three,
+            R.layout.activity_cars_fara_four,
+            R.layout.activity_cars_fara_five,
+            R.layout.activity_cars_fara_six,
+            R.layout.activity_cars_fara_seven,
+            R.layout.activity_cars_fara_eight,
+            R.layout.activity_cars_fara_nine,
+            R.layout.activity_cars_fara_ten,
+            R.layout.activity_cars_fara_eleven,
+            R.layout.activity_cars_fara_twelve
     };
 
     @Override
@@ -39,7 +43,7 @@ public class photoMemesActivity extends BaseActivity {
     private void setupStepUI(int stepIndex) {
         if (stepIndex < stepLayouts.length - 1) {
             // универсальная логика для шагов
-            Button btnCorrect = findViewById(R.id.meme_correct);
+            Button btnCorrect = findViewById(R.id.btn_correct);
             Button btnWrong = findViewById(R.id.btn_wrong);
 
             if (btnCorrect != null) {
@@ -49,13 +53,14 @@ public class photoMemesActivity extends BaseActivity {
                 btnWrong.setOnClickListener(v -> goToGameOver());
             }
         } else {
+            // победный экран
             Button btnFinish = findViewById(R.id.btn_finish);
             if (btnFinish != null) {
                 btnFinish.setOnClickListener(v -> goToMenu());
             }
 
-            Button End = findViewById(R.id.meme_end);
-            End.setOnClickListener(v -> goToMenu());
+            Button Endd = findViewById(R.id.btn_endd);
+            Endd.setOnClickListener(v -> goToMenu());
         }
     }
 

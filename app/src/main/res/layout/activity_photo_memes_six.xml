@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".photoMemesSixActivity">
+    >
 
     <TextView
         android:id="@+id/text_myGame"
@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/shodka" />
 
     <Button
-        android:id="@+id/shodka_btn"
+        android:id="@+id/meme_final"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"

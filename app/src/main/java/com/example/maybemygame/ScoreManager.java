@@ -1,5 +1,7 @@
 package com.example.maybemygame;
 
+import android.widget.Toast;
+
 public class ScoreManager {
     private static int score = 0;
 
@@ -17,4 +19,6 @@ public class ScoreManager {
     public static void resetScore(){
         score = 0;
     }
+
+
 }

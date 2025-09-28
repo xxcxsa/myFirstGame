@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".photoMemesFiveActivity">
+    >
 
     <TextView
         android:id="@+id/text_myGame"
@@ -47,7 +47,7 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="56dp"
         android:text="Макс приедь"
-        app:layout_constraintBottom_toTopOf="@+id/uspeh_btn"
+        app:layout_constraintBottom_toTopOf="@+id/meme_end"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
@@ -61,7 +61,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/uspeh_btn"
+        android:id="@+id/meme_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
